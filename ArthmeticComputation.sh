@@ -17,5 +17,7 @@ echo "Second Operation: $a2"
 a3=$((c+a/b))
 echo "Third Operation: $a3"
 
-
+#### Use Case5
+a4=$((a%b+c))
+echo "Fourth Operation: $a4"
 
