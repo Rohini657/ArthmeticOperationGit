@@ -26,7 +26,14 @@ declare -A add
 
 add[First Operation]=$a1;
 add[Second Operation]=$a2;
-add[Third Operation]=$a3;
+add[Third Operartion]=$a3;
 add[Fourth Operation]=$a4;
 
 echo "All Operation" ${add[@]}
+
+#### Use Case7
+echo "Array Representation"
+for i in {1..3};
+do
+	echo ${add[@]}
+done
