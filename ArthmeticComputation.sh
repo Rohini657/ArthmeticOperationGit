@@ -9,7 +9,9 @@ read -p "Enter Third Number :  " c;
 a1=$((a+b*c))
 echo "First Operation:= $a1"
 
-
+#### Use Case3
+a2=$((a*b+c))
+echo "Second Operation: $a2"
 
 
 
