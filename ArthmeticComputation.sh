@@ -33,7 +33,24 @@ echo "All Operation" ${add[@]}
 
 #### Use Case7
 echo "Array Representation"
-for i in {1..3};
+for i in {1..3}
 do
 	echo ${add[@]}
 done
+
+#### Use Case8
+echo "Ascending Order"
+for ((i=0;i<3;i++))
+do
+	for ((j=0;j<3-$i;j++)) 
+	do
+	if [[ ${add[j]} -gt ${add[$((j+1))]} ]]
+	then
+		temp=${add[$j]}
+		add[$j]=${add[$((j+1))]}
+		add[$((j+1))]=$temp
+	fi
+	done
+done
+#Print number Sorted order
+echo "Sorted Array :${add[*]}"
