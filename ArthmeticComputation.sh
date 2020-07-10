@@ -21,3 +21,12 @@ echo "Third Operation: $a3"
 a4=$((a%b+c))
 echo "Fourth Operation: $a4"
 
+#### Use Case6
+declare -A add
+
+add[First Operation]=$a1;
+add[Second Operation]=$a2;
+add[Third Operation]=$a3;
+add[Fourth Operation]=$a4;
+
+echo "All Operation" ${add[@]}
