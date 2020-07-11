@@ -33,24 +33,51 @@ echo "All Operation" ${add[@]}
 
 #### Use Case7
 echo "Array Representation"
-for i in {1..3}
-do
-	echo ${add[@]}
-done
+echo "Array Representation"
+arr[0]=${add[a1]}
+arr[1]=${add[a2]}
+arr[2]=${add[a3]}
+arr[3]=${add[a4]}
 
 #### Use Case8
-echo "Ascending Order"
-for ((i=0;i<3;i++))
+echo "Decending Order"
+for ((i=0;i<4;i++))
 do
-	for ((j=0;j<3-$i;j++)) 
-	do
-	if [[ ${add[j]} -gt ${add[$((j+1))]} ]]
-	then
-		temp=${add[$j]}
-		add[$j]=${add[$((j+1))]}
-		add[$((j+1))]=$temp
-	fi
-	done
+        for ((j=0;j<4-$i-1;j++))
+        do
+        if [[ ${arr[j]} -lt ${arr[$((j+1))]} ]]
+        then
+                temp=${arr[$j]}
+                arr[$j]=${arr[$((j+1))]}
+                arr[$((j+1))]=$temp
+        fi
+        done
 done
 #Print number Sorted order
-echo "Sorted Array :${add[*]}"
+for ((j=0;j<4;j++))
+do
+        echo ${arr[j]}
+done
+
+####Ascending Order
+echo "Asending Order:"
+for ((i=0;i<4;i++ ))
+do
+        for ((j=0;j<4-i-1;j++ ))
+        do
+        if [ ${arr[j]} -gt ${arr[$((j+1))]} ]
+        then
+                temp=${arr[j]}
+                arr[$j]=${arr[$((j+1))]}
+                arr[$((j+1))]=$temp
+        fi
+        done
+done
+
+#echo"Asending Order:"
+
+for ((j=o;j<4;j++))
+do
+        echo ${arr[j]}
+done
+
